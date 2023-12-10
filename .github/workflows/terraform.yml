@@ -40,7 +40,7 @@ jobs:
       run: terraform init
 
     - name: Terraform Plan
-      run: terraform plan -auto-approve
+      run: terraform plan -yes
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
